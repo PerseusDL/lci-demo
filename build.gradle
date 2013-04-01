@@ -1,0 +1,45 @@
+
+apply plugin:  "maven"
+
+
+
+group = "org.perseus"
+version = "0.1.0"
+
+
+
+task web (type: Copy) {
+    from  'src'
+    into "${buildDir.path}/berti_demo"
+    description "Assembles directory usable on a web server in ${buildDir.path}/html-ctskit"
+}
+
+
+
+task zipKit (type: Zip, dependsOn: web) {
+    from(file("${buildDir.path}/berti_demo"))
+    into("berti_demo")
+    description "Builds a zip file of web directory"
+}
+
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://beta.hpcc.uh.edu/nexus/content/repositories/releases"
+    }
+}
+
+
+artifacts {
+    archives zipKit
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: nexusRepo) {                   
+            authentication (userName: nexusUser, password: nexusPassword)
+        }
+    }
+}

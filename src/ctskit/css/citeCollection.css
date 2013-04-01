@@ -1,0 +1,44 @@
+﻿table.citeCollectionTable {
+	padding: 0.25em;
+	margin: 0.25em;
+	display: block;
+	border: 1px solid silver;
+}
+
+caption.citeCollectionTable {
+	font-weight: bold;
+	border-bottom: 1px solid silver;
+	padding-bottom: 0.5em;
+}
+
+td.citeCollectionTable, th.citeCollectionTable {
+	padding-right: 0.5em;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+
+tr.citeCollectionTable:nth-child(odd){
+	background-color: #ddd;
+}
+
+tr.citeCollectionTable:nth-child(1) {
+	background-color: maroon;
+	color: white;
+}
+
+
+/* Image stuff */
+
+div.citeimagediv {
+	padding: 0.25em;
+	margin: 0.25em;
+	display: block;
+	width: auto;
+}
+
+div.citeimagecaption {
+	font-size: 85%;
+	width: 600px;
+}

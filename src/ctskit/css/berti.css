@@ -1,0 +1,60 @@
+.cts-biblio {
+    margin-left: 0;
+}
+
+.tei_milestone {
+    float: right;
+    margin-left: .25em;
+    font-style:italic;
+    font-size:small;
+}
+
+.passage_urn,.full_urn {
+    font-weight: bold;
+    font-size: small;
+}
+.features {
+    float:right;
+    font-size: small;
+}
+
+.lciurn {
+    font-style: italic;
+    font-size: small;
+}
+
+.lcidesc {
+    font-style: italic;
+}
+
+.hints {
+    font-style: italic;
+    color: gray;
+}
+
+.highlighted,.highlight {
+    font-weight: bold;
+    background-color: yellow;
+}
+
+table.lcicites tr td {
+    padding: .25em;
+}
+
+.tabs {
+    min-height: 600px;
+    width: 48%;
+}
+
+.citeprop_author {
+    font-style: italic;
+    font-size: smaller;
+}
+
+div.quote {
+    margin:1em;
+}
+
+.gap {
+    margin-bottom: 1em;
+}

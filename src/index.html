@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Perseids: Fragmentary Authors Demo</title>
+	
+	<!-- COPY FROM HERE... -->
+		
+	<!-- CHS css -->
+	<link href="ctskit/css/normalize.css" media="screen" rel="stylesheet" type="text/css" ></link>
+	<link href="ctskit/css/tei.css" media="screen" rel="stylesheet" type="text/css"></link>
+	<link href="ctskit/css/citeCollection.css" media="screen" rel="stylesheet" type="text/css"></link>
+	
+	<!-- Jquery UI -->
+	<link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"></link>
+
+	<!-- Epifacs UI -->
+	<link href="ctskit/css/epifacs.css" media="screen" rel="stylesheet" type="text/css"></link>
+	
+	<!-- Berti UI -->
+	<link href="ctskit/css/berti.css" media="screen" rel="stylesheet" type="text/css"></link>
+	
+	<!-- Everyone uses JQuery -->
+	<script src="ctskit/js/jquery-1.7.2.min.js" type="text/javascript" ></script>
+	
+	<!-- And JQuery UI -->
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+	<!-- Sarissa Javascript (for doing xslt stuff) -->	
+	<script src="ctskit/js/sarissa/sarissa-compressed.js" type="text/javascript"></script>
+	<script src="ctskit/js/sarissa/sarissa_ieemu_xpath-compressed.js" type="text/javascript"></script>
+
+	<!-- Markdown -->
+	<script src="ctskit/js/markdown.js" type="text/javascript"></script>
+	
+	<!-- CHS Javascript -->
+	<script src="ctskit/js/cite-cts-kit.js" type="text/javascript" ></script>
+	
+	<!-- Subref Javascript -->
+	<script src="ctskit/js/cts-subref.js" type="text/javascript" ></script>
+	
+	<!-- Perseus Javascript -->
+	<script src="ctskit/js/lci.js" type="text/javascript" ></script>
+	
+	<!-- Annotations -->
+	<script src="berti_annotate.js" type="text/javascript" ></script>
+	
+	<!-- User-defined variables -->
+    <script type="text/javascript">
+    
+	    /* If a URI is in http://... format, the scripts will happily use that; if you have a 
+    	   "bare" URN, the variable below will be used to construct a service-request. One consequence
+    		of this: with http-uri's you can mix and match data from different services of the same type; 
+    		with URNs, all URNs must be served from the services specified below.
+    	*/
+    
+    	/* Text Things */
+    	var textElementClass = "cts-text";
+    	var pathToXSLT = "ctskit/xsl/berti/berti-display.xsl";
+    	var urlOfCTS = "http://www.perseus.tufts.edu/hopper/CTS?request=GetPassage&urn=";
+
+		/* Image Things */
+    	var imgElementClass = "cite-img";
+    	var imgSize = 200;
+    	var urlOfImgService = "http://services.perseus.tufts.edu/chsimg/Img?urn=";
+    	var pathToImgXSLT = "ctskit/xsl/gip.xsl";
+
+		/* Collection Things */
+		var urlOfCite = "http://sosol.perseus.tufts.edu/collections/api?req=GetObject&urn=";
+    	var collectionElementClass = "cite-collection";
+    	var pathToCiteXSLT = "ctskit/xsl/berti/lci.xsl";
+    	
+    	var subrefTextElementClass = "cts-subref-text";
+		var pathToSubrefXSLT = "ctskit/xsl/extract_text.xsl";
+		
+		var documentStartCallback = null;
+    </script>
+    
+    <!-- ...TO HERE -->
+    
+</head>
+<body>
+
+	<header>
+		<p>Perseids: Fragmentary Texts· Monica Berti, ed.</p>
+	</header>
+
+<article>
+	<h1>Fragmentary Text Demo</h1>
+	<h2>Istros</h2>
+		<ul>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/></li>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.2"/></li>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.3"/></li>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.4"/></li>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.5"/></li>
+			<!--li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.6"/></li>
+			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.7"/></li-->
+		</ul>
+</article>
+	<footer>
+		<p>This project received support from Tufts University, the National Endowment for the Humanities [grant HD-51548-12] and the Institute of Museum and Library Services.</p>
+		<p><span class="rights">Software licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPL 3.0 License</a>. See also <a href="#ui-id-8">Credits</a>.</span></p>
+		<p><span class="rights">Images, text and data licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-ShareAlike 3.0 United States License.</a></span></p>		
+	</footer>
+</body>
+</html>
