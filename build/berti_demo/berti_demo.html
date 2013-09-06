@@ -57,7 +57,7 @@
     	/* Text Things */
     	var textElementClass = "cts-text";
     	var pathToXSLT = "ctskit/xsl/berti/berti-display.xsl";
-    	var urlOfCTS = "http://sosol.perseus.tufts.edu/exist/rest/db/xq/CTS.xq?request=GetPassage&inv=perseus&urn=";
+    	var urlOfCTS = "http://perseids.org/alpheios/cts/xq/CTS.xq?request=GetPassage&inv=perseids&urn=";
 
 		/* Image Things */
     	var imgElementClass = "cite-img";
@@ -66,7 +66,7 @@
     	var pathToImgXSLT = "ctskit/xsl/gip.xsl";
 
 		/* Collection Things */
-		var urlOfCite = "http://sosol.perseus.tufts.edu/collections/api?req=GetObject&urn=";
+		var urlOfCite = "http://perseids.org/collections/";
     	var collectionElementClass = "cite-collection";
     	var pathToCiteXSLT = "ctskit/xsl/berti/lci.xsl";
     	
@@ -90,7 +90,7 @@
 
 	<h1>Fragmentary Text Demo</h1>
 	<h2>Istros</h2>
-	<h3><p id="targetcite" data:xslt-params="e_propfilter=title" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/></h3>
+	<h3><p id="targetcite" data:xslt-params="e_propfilter=title" class="cite-collection" cite="http://perseids.org/collections/urn:cite:perseus:lci.1"/></h3>
 		<div class="digitial_edition_info">
 			<p class="links"><a href="index.html"><< Istros Lost Content Items</a> | <a onclick="return openLink();" href="#biblio">Bibliography</a> | <a target="_blank" href="credits.html">Credits</a></p>
 		</div>
@@ -119,7 +119,7 @@
 	        </ul>
     		<p>
     			<div id="allcite">
-    				<p class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/>
+    				<p class="cite-collection" cite="http://perseids.org/collections/urn:cite:perseus:lci.1"/>
     			</div>
     			<blockquote style="display:none;" id="alltranslation"></blockquote>
     			<blockquote style="display:none;" id="allcommentary"></blockquote>
