@@ -57,7 +57,7 @@
     	/* Text Things */
     	var textElementClass = "cts-text";
     	var pathToXSLT = "ctskit/xsl/berti/berti-display.xsl";
-    	var urlOfCTS = "http://www.perseus.tufts.edu/hopper/CTS?request=GetPassage&urn=";
+    	var urlOfCTS = "http://sosol.perseus.tufts.edu/exist/rest/db/xq/CTS.xq?request=GetPassage&inv=perseus&urn=";
 
 		/* Image Things */
     	var imgElementClass = "cite-img";
@@ -73,7 +73,8 @@
     	var subrefTextElementClass = "cts-subref-text";
 		var pathToSubrefXSLT = "ctskit/xsl/extract_text.xsl";
 		
-		var documentStartCallback = null;
+		var documentStartCallback = onDocumentStart;
+
     </script>
     
     <!-- ...TO HERE -->
@@ -85,22 +86,55 @@
 		<p>Perseids: Fragmentary Texts· Monica Berti, ed.</p>
 	</header>
 
-<article>
+<article id="epifacs">
+
 	<h1>Fragmentary Text Demo</h1>
 	<h2>Istros</h2>
-		<ul>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/></li>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.2"/></li>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.3"/></li>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.4"/></li>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.5"/></li>
-			<!--li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.6"/></li>
-			<li><p id="targetcite" data:xslt-params="e_linkUrn=true" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.7"/></li-->
-		</ul>
+	<h3><p id="targetcite" data:xslt-params="e_propfilter=title" class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/></h3>
+		<div class="digitial_edition_info">
+			<p class="links"><a href="index.html"><< Istros Lost Content Items</a> | <a onclick="return openLink();" href="#biblio">Bibliography</a> | <a target="_blank" href="credits.html">Credits</a></p>
+		</div>
+        <div class="tabs screen_left">
+	        <ul>
+	            <li><a href="#alleditions"><span>Source Text</span></a></li>
+	        	<li><a href="#allwitnesses"><span>Witnesses</span></a></li>
+	        	<li><a href="#allparallel"><span>Parallel</span></a></li>
+	        </ul>
+        	<p>
+        		<blockquote id="alleditions" class="alpheios-enabled-text" xml:lang="grc">Source text will appear here.</blockquote>
+        		<blockquote style="display:none;" id="allwitnesses"></blockquote>
+        		<blockquote style="display:none;" id="allparallel"></blockquote>
+        	</p>
+        </div>
+        
+        <div class="tabs screen_right">
+        	 <ul>
+        	 	<li><a href="#allcite"><span>Lost Content Item</span></a></li>
+	            <li><a href="#alltranslation"><span>Translation</span></a></li>
+	            <li><a href="#allcommentary"><span>Commentary</span></a></li>
+        	 	<li><a href="#allalignment"><span>Alignments</span></a></li>
+        	 	<li><a href="#allsyntax"><span>Syntax</span></a></li>
+        	 	<!--li><a href="#allbibl"><span>Bibliography</span></a></li-->
+        	 	<li><a href="#alllinks"><span>Links</span></a></li>
+	        </ul>
+    		<p>
+    			<div id="allcite">
+    				<p class="cite-collection" cite="http://data.perseus.org/collections/urn:cite:perseus:lci.1"/>
+    			</div>
+    			<blockquote style="display:none;" id="alltranslation"></blockquote>
+    			<blockquote style="display:none;" id="allcommentary"></blockquote>
+    			<blockquote style="display:none;" id="allalignment"></blockquote>
+    			<blockquote style="display:none;" id="allsyntax"></blockquote>
+    			<!--blockquote style="display:none;" id="allbibl">Under development - will display bibliographic information for the source text which is displayed on the left.</blockquote-->
+    			<blockquote style="display:none;" id="alllinks"></blockquote>
+    		</p>
+        </div>	
 </article>
+
+
 	<footer>
 		<p>This project received support from Tufts University, the National Endowment for the Humanities [grant HD-51548-12] and the Institute of Museum and Library Services.</p>
-		<p><span class="rights">Software licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPL 3.0 License</a>. See also <a target="_blank" href="credits.html">Credits</a>.</span></p>
+		<p><span class="rights">Software licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GPL 3.0 License</a>. See also <a href="credits.html" target="_blank">Credits</a>.</span></p>
 		<p><span class="rights">Images, text and data licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-ShareAlike 3.0 United States License.</a></span></p>		
 	</footer>
 </body>

@@ -1,0 +1,177 @@
+body {
+	padding: 25px;
+}
+
+/* waiting */
+.waiting {
+	background-image:url('waiting.gif') !important;
+	background-repeat: no-repeat !important;
+	height: 1.5em !important;	
+	/*width: 256px;*/
+	background-position: 2px 2px !important;
+}
+
+/* Nav */
+nav {
+  border: none;
+  margin-bottom: 2em;
+  margin-top: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-left: 2px solid black;
+}
+nav ul li:nth-child(1) {
+  border-left: none;
+  padding-left: 0em;
+}
+
+nav {
+  font-size: 75%;
+  line-height: 100%;
+}
+
+/* end nav */
+
+/* MD Stuff */
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+/* End MD Stuff */
+
+code {
+	font-family:"Courier New",Courier,mono;
+}
+
+#epifacs h1 {
+	color: maroon;
+	font-size: 125%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+#epifacs h2 {
+	font-weight: bold;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
+}
+
+#epifacs header h1 {
+	margin-bottom: 5px;
+	font-size: 85%;
+}
+
+#epifacs a {
+	color: navy;
+	text-decoration: none;
+}
+
+#epifacs a:hover {
+	color: blue;
+}
+
+#epifacs blockquote {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+#epifacs p {
+	margin-bottom: 0.5em;
+}
+
+#epifacs img {
+	border: 5px double silver;
+	padding: 5px;
+	margin: 5px;
+}
+
+#epifacs ul {
+  list-style: circle;
+}
+
+header,
+article,
+footer,
+nav {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header {
+  border-bottom: 1px solid #800000;
+}
+
+header,
+footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  clear: both;
+}
+footer {
+  clear: both;
+  border-top: 1px solid #800000;
+  margin-top: 2em;
+}
+
+#epifacs form {
+	margin-bottom: 1em;
+}
+
+.tabs {
+    max-width: 50%;
+}
+
+.ui-tabs-nav {
+    font-size: small;
+}
+
+.screen_left {
+    float: left;
+    margin-right: .5em;
+}
+
+.screen_right {
+    float: left;
+    max-width: 45%;
+}
+
+.textpartnumber {
+	display:none;
+}
+
+#epifacs sup {
+	color:blue;
+	text-decoration: underline;
+}
+
+.linenumber {
+    float: right;
+}
+
+#epifacs-image-nav {
+    clear: both;
+}
+
+.credits-label {
+    font-style:italic;
+    padding-right: 1em;
+}
+
+#allcredits ul {
+    list-style: disc inside none;
+    margin-left: .25em;
+}

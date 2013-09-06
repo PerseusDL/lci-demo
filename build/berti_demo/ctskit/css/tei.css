@@ -1,0 +1,171 @@
+
+/*
+----------------------------------
+Handle TEI elements (constructed by getPassage.xsl)
+----------------------------------
+*/
+
+.cts-content{
+	padding: 1em;
+}
+
+.cts-biblio {
+	font-size: 0.8em;
+	line-height: 1em;
+	margin-left: 8em;
+}
+
+.cts-quotation {
+	font-size: 100%;
+	margin-bottom: 0em;
+}
+
+:lang(ar){
+	text-align: right;
+}
+
+.tei_lineNumber {
+	color: #aaa;
+	background-color:inherit;
+	margin-right: 2em;
+	/* float: right; */
+}
+
+:lang(ar) .tei_lineNumber {
+	float: right;
+	margin-left: 2em;
+}
+
+.tei_section {
+	display: block;
+	padding-top: 0.5em;
+}
+
+.tei_sectionNum:before {
+	content: "§";
+}
+
+.tei_sectionNum {
+	margin-left: 3.5em;
+	padding-right: 0em;
+	display: inline;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	color: maroon;
+}
+
+.tei_section p, .tei_section h3 {
+	margin-left: 3.5em;
+}
+
+
+.tei_unclearText {
+	color: grey;
+}
+
+.tei_suppliedText {
+	color: #69C;
+}
+
+
+.tei_sic {
+	color: red;
+}
+
+.tei_corr {
+	color: green;
+}
+
+.tei_bookNumber {
+	display: inline;
+	margin-left: 3.5em;
+	font-weight: bold;
+	color: maroon;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.tei_book {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.title {
+	font-style: oblique;
+}
+
+.supralinearText {
+	color: red;
+	vertical-align: super;
+}
+
+del {
+	text-decoration: line-through;
+	color: red;
+}
+
+.primaryTitle {
+	font-style: oblique;
+}
+
+.note {
+	display: block;
+	float: right;
+	width: 40%;
+	font-size: 85%;
+	border-left: 1px solid black;
+	padding-left: 1em;
+}
+
+.fragment {
+	background: blue;
+}
+
+.column {
+
+}
+
+.speaker {
+	font-weight: bold;
+}
+
+p {
+	display: block;
+}
+	
+bibl:before {
+	content: " (";
+}
+
+bibl {
+	display: block;
+	color: maroon;
+	margin-left: 3em;
+	font-size: 70%;
+	margin-bottom: 1em;
+	}
+
+bibl:after {
+	content: ") ";
+}
+
+.note bibl {
+	display: inline;
+	color: maroon;
+	margin-left: 0em;
+	font-size: 100%;
+	margin-bottom: 0em;
+	}
+
+.note bibl:before {
+	content: "";
+}
+
+.note bibl:after {
+	content: "";
+}
+
+div.tei_section, div.tei_book, body, text, div.tei_section p, div.tei_section p {
+	/* font-family: Gentium,"Palatino Linotype","Lucida Grande","Arial Unicode MS",sans-serif; */
+}
+
